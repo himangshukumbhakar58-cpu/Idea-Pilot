@@ -1,0 +1,7 @@
+import { useState } from 'react';
+import { Check, ChevronDown, ChevronUp, Circle, Target } from 'lucide-react';
+import { DemoBadge, Pill } from './ui';
+export default function StrategyDayCard({ day, completed, onToggle }) {
+  const [open,setOpen] = useState(false);
+  return <article className={`strategy-day glass ${completed ? 'day-completed' : ''}`}><div className="day-index"><span>DAY</span><strong>{String(day.day).padStart(2,'0')}</strong></div><div className="day-content"><div className="day-top"><span className="eyebrow">{day.label}</span><Pill tone={day.kind === 'Publish' ? 'publish' : ''}>{day.kind}</Pill></div><h2>{day.topic}</h2><div className="strategy-meta"><span>{day.platform}</span><i /><span>{day.format}</span><DemoBadge /></div><p>{day.angle}</p><div className="strategy-objective"><Target size={14} /><span>{day.objective}</span></div><button className="subtle-button" onClick={() => setOpen(!open)} aria-expanded={open}>{open ? <ChevronUp size={14} /> : <ChevronDown size={14} />}Why this comes next</button>{open && <div className="sequence-reason">{day.reason}</div>}</div><button className={`complete-button ${completed ? 'completed' : ''}`} onClick={onToggle} aria-pressed={completed} aria-label={`${completed ? 'Mark incomplete' : 'Mark complete'}: Day ${day.day}`} title="Track your local demo plan">{completed ? <Check size={19} /> : <Circle size={19} />}</button></article>;
+}

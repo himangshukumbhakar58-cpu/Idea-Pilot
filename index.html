@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b10" />
+    <meta name="description" content="Know what to create next. IdeaPilot turns creator research into content opportunities and a connected seven-day strategy. Frontend demo." />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <title>IdeaPilot — Know What to Create Next.</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if (window.location.protocol !== 'file:' && window.location.pathname.endsWith('/index.html')) {
+        window.history.replaceState(null, '', '/');
+      }
+    </script>
+    <script src="./dist/assets/app.js"></script>
+  </body>
+</html>

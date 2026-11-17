@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+artifacts/
+.npm-cache/
+.edge-ribbon*
+*.zip
+ribbon-*.png
+.*check.html
+IdeaPilot_Project_Codebase.txt
+IdeaPilot_Project_Codebase.md
